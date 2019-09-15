@@ -1,23 +1,24 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import logo from './logo.svg';
 import './App.css';
-
-import SideNav from './SideNav'
-
-import Home from './pages/Home.js';
-import About from './pages/About.js';
 
 function App() {
   return (
-    <div id="AppPage">
-      <div id="topbar">
-        <a href="/">Game Design Club Website</a>
-      </div>
-      <SideNav items={['About']}/>
-      <Router id="content">
-        <Route exact={true} path="/" component={Home}/>
-        <Route exact={true} path="/About" component={About}/>
-      </Router>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }
